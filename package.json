@@ -1,0 +1,12 @@
+{
+  "name": "karma-mockserver",
+  "version": "0.1.0",
+  "description": "A simple Karma framework to start a node script (which is supposed to start a server written with node).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "child_process": "1.0.2"
+  }
+}
