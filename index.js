@@ -11,7 +11,6 @@ var initMockServer = function (config) {
   var options = config.client.mockserver.options;
 
   if (mockServerPath) {
-    console.log(mockServerPath);
     fork(path.join(basePath, mockServerPath), commandLineArgs, options);
   } else {
     throw new Error('No path for mockserver configured!')
