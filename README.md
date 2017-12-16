@@ -62,3 +62,7 @@ There is no reset of the server as long as the karma server is running,
 especially not between different runs of your test suite or even single tests. 
 If you want to achieve this then provide a `/reset` Endpoint on your server and
 trigger it programmatically.
+
+## License
+This project is licensed under the Apache 2.0 license. For further information 
+have a look into the `LICENSE` file in the project root folder.
