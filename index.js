@@ -20,6 +20,7 @@ var path = require('path');
 var initMockServer = function(config) {
   var basePath, mockServerPath, commandLineArgs, options;
   var localConfig = config || {};
+  var mockServer;
 
   localConfig.client = localConfig.client || {};
   localConfig.client.mockserver = localConfig.client.mockserver || {};
@@ -29,10 +30,11 @@ var initMockServer = function(config) {
   options = localConfig.client.mockserver.options;
 
   if (mockServerPath) {
-    childProcess.fork(path.join(basePath, mockServerPath), commandLineArgs, options);
+    mockServer = childProcess.fork(path.join(basePath, mockServerPath), commandLineArgs, options);
   } else {
     throw new Error('No path for mockserver configured!');
   }
+  process.on('exit', () => mockServer.kill());
 };
 
 initMockServer.$inject = ['config'];
