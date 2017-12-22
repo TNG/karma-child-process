@@ -13,23 +13,25 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
  */
-
-var fork = require('child_process').fork;
+/* eslint-env node */
+var childProcess = require('child_process');
 var path = require('path');
 
-var initMockServer = function (config) {
-  config = config || {};
-  config.client = config.client || {};
-  config.client.mockserver = config.client.mockserver || {};
-  var basePath = config.basePath || '';
-  var mockServerPath = config.client.mockserver.path;
-  var commandLineArgs = config.client.mockserver.args;
-  var options = config.client.mockserver.options;
+var initMockServer = function(config) {
+  var basePath, mockServerPath, commandLineArgs, options;
+  var localConfig = config || {};
+
+  localConfig.client = localConfig.client || {};
+  localConfig.client.mockserver = localConfig.client.mockserver || {};
+  basePath = localConfig.basePath || '';
+  mockServerPath = localConfig.client.mockserver.path;
+  commandLineArgs = localConfig.client.mockserver.args;
+  options = localConfig.client.mockserver.options;
 
   if (mockServerPath) {
-    fork(path.join(basePath, mockServerPath), commandLineArgs, options);
+    childProcess.fork(path.join(basePath, mockServerPath), commandLineArgs, options);
   } else {
-    throw new Error('No path for mockserver configured!')
+    throw new Error('No path for mockserver configured!');
   }
 };
 
