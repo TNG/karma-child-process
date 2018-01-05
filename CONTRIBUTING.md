@@ -28,3 +28,7 @@ If you want to run the tests just type
 ```
 npm run unittest
 ```
+or for the integration-test run 
+```
+npm run integration-test
+```
