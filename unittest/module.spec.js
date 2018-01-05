@@ -12,7 +12,7 @@ describe('The module ', () => {
   let forkStub, revertChildProcessRewire, revertPathRewire;
 
   beforeEach(() => {
-    forkStub = sinon.stub();
+    forkStub = sinon.stub().returns({kill: () => {}});
     revertChildProcessRewire = moduleUnderTest.__set__('childProcess', {fork: forkStub});
     revertPathRewire = moduleUnderTest.__set__('path', {join: (basePath, path) => `${basePath}/${path}`});
   });

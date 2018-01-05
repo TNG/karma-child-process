@@ -5,6 +5,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "scripts": {
+    "eslint": "mkdir -p \"report/eslint\" && eslint -f checkstyle . > report/eslint/eslint.xml",
     "unittest": "mkdir -p \"report/tests\" && env BABEL_ENV='test' XUNIT_FILE='report/tests/TESTS-NodeJS.xml' node node_modules/mocha/bin/mocha --ui bdd --recursive 'unittest/*.spec.js' -R spec-xunit-file"
   },
   "dependencies": {
