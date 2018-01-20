@@ -17,28 +17,30 @@ limitations under the License.
 var childProcess = require('child_process');
 var path = require('path');
 
-var initMockServer = function(config) {
-  var basePath, mockServerPath, commandLineArgs, options;
+var initFunction = function(config) {
+  var basePath, childProcessPath, commandLineArgs, options;
   var localConfig = config || {};
-  var mockServer;
+  var forkedChildProcess;
 
   localConfig.client = localConfig.client || {};
-  localConfig.client.mockserver = localConfig.client.mockserver || {};
+  localConfig.client.childProcess = localConfig.client.childProcess || {};
   basePath = localConfig.basePath || '';
-  mockServerPath = localConfig.client.mockserver.path;
-  commandLineArgs = localConfig.client.mockserver.args;
-  options = localConfig.client.mockserver.options;
+  childProcessPath = localConfig.client.childProcess.path;
+  commandLineArgs = localConfig.client.childProcess.args;
+  options = localConfig.client.childProcess.options;
 
-  if (mockServerPath) {
-    mockServer = childProcess.fork(path.join(basePath, mockServerPath), commandLineArgs, options);
+  if (childProcessPath) {
+    forkedChildProcess = childProcess.fork(path.join(basePath, childProcessPath), commandLineArgs, options);
+    process.on('exit', function() {
+      forkedChildProcess.kill();
+    });
   } else {
-    throw new Error('No path for mockserver configured!');
+    throw new Error('No path for child process configured!');
   }
-  process.on('exit', () => mockServer.kill());
 };
 
-initMockServer.$inject = ['config'];
+initFunction.$inject = ['config'];
 
 module.exports = {
-  'framework:mockserver': ['factory', initMockServer]
+  'framework:child-process': ['factory', initFunction]
 };

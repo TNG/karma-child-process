@@ -1,7 +1,9 @@
 /* eslint-env node */
 const karmaConfig = {
-  frameworks: ['mocha', 'browserify', 'mockserver'],
+  frameworks: ['mocha', 'browserify', 'child-process'],
+
   browsers: ['Firefox'],
+
   client: {
     mocha: {
       timeout: 15000,
@@ -13,10 +15,20 @@ const karmaConfig = {
       options: {}
     }
   },
+
   singleRun: true,
+
   preprocessors: {
     'integ-test.spec.js': ['browserify']
   },
+
+  reporters: ['mocha'],
+
+  mochaReporter: {
+    showDiff: 'inline',
+    output: 'full'
+  },
+
   files: ['integ-test.spec.js']
 };
 

@@ -1,5 +1,4 @@
 {
-  "parser": "babel-eslint",
   "env": {
     "browser": false,     // browser global variables
     "node": false,        // Node.js global variables and Node.js-specific rules

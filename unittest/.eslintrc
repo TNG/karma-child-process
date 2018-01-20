@@ -1,4 +1,7 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
   "globals": {
     "expect": false,
     "sinon": false
