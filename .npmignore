@@ -1,0 +1,10 @@
+.idea/
+karma-mockserver.iml
+
+report/
+unittest/
+integ-test/
+
+.eslintrc
+.gitignore
+.npmignore
