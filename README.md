@@ -1,4 +1,4 @@
-# karma-mockserver
+# karma-child-process
 
 Framework for karma-test-runner which forks a process on startup to run a 
 separate node process during the karma tests. Internally it uses the `fork` method 
@@ -11,9 +11,9 @@ for E2E-tests without the need for a complete Docker-setup. Therefore the test
 setup can start faster, with less costs for infrastructure. 
 
 ## Installation
-To install the `karma-mockserver` framework in your local directory type
+To install the `karma-child-process` framework in your local directory type
 ```
-npm install karma-mockserver --save-dev
+npm install karma-child-process --save-dev
 ```
 Of course you need to install `karma` as well.
 ```
@@ -24,9 +24,9 @@ npm install karma --save-dev
 For configuration put this into your `karma.conf.js`:
 ```
 config = {
-  frameworks: ['mockserver'],
+  frameworks: ['child-process'],
   client: {
-    mockserver: {
+    childProcess: {
       path: 'path/to/mock-server.js',
       args: [],
       options: {}
