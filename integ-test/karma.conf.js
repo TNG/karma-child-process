@@ -9,7 +9,7 @@ const karmaConfig = {
       timeout: 15000,
       bail: true
     },
-    mockserver: {
+    childProcess: {
       path: 'mock-server.js',
       args: [],
       options: {}
