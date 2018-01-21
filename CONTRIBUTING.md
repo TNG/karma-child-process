@@ -5,13 +5,13 @@ Contributions are very welcome. There are different ways you can contribute:
 1. Create Pull-Requests for new features
     * please use the `eslint` settings in the repo for the code style
 1. Improve the documentation
-    * The karma-mockserver documentation is written in Markdown and is located in the projects root folder in the `README.md`.
+    * The karma-child-process documentation is written in Markdown and is located in the projects root folder in the `README.md`.
 1. Fix/implement known issues
     * Issues with the label [help wanted] would be the ideal candidate for that.
-1. Come up with new ideas for improving karma-mockserver
-    * If you have an idea how karma-mockserver can be improved, just open a new issue and describe your idea.
+1. Come up with new ideas for improving karma-child-process
+    * If you have an idea how karma-child-process can be improved, just open a new issue and describe your idea.
 1. Report bugs
-    * If you find a bug in karma-mockserver, please open a new issue.
+    * If you find a bug in karma-child-process, please open a new issue.
     * Provide a minimum working example of your configuration (`karma.conf.js`) and 
       the versions of `node`, `karma-runner`, ... 
 
@@ -26,9 +26,5 @@ If you want to submit a contribution, please follow the following workflow:
 ## Testing
 If you want to run the tests just type
 ```
-npm run unittest
-```
-or for the integration-test run 
-```
-npm run integration-test
+npm run test
 ```
