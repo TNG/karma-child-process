@@ -21,7 +21,11 @@ If you want to submit a contribution, please follow the following workflow:
 1. Fork the project
 2. Create a new feature branch with your contribution (not needed for documentation improvements)
 3. Implement your great new feature or bug fix
-4. Create a pull request
+4. Add a Copyright notice to NOTICE.md to collect the copyright information. Please add the following line without the brackets just below the headline
+   ```
+   Copyright [XXXX-XXXX] [name of copyright owner]
+   ```
+5. Create a pull request
 
 ##  Sign your work - the Developer's Certificate of Origin
 The sign-off is a simple line at the end of the explanation for the patch, which certifies that you wrote it or otherwise have the right to pass it on as an open-source patch. The rules are pretty simple: if you can certify the below (from developercertificate.org):
