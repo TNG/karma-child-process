@@ -21,7 +21,7 @@ If you want to submit a contribution, please follow the following workflow:
 1. Fork the project
 2. Create a new feature branch with your contribution (not needed for documentation improvements)
 3. Implement your great new feature or bug fix
-4. Add a Copyright notice to NOTICE.md to collect the copyright information. Please add the following line without the brackets just below the headline
+4. Add a Copyright notice to NOTICE to collect the copyright information. Please add the following line without the brackets just below the headline
    ```
    Copyright [XXXX-XXXX] [name of copyright owner]
    ```
