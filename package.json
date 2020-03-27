@@ -4,6 +4,14 @@
   "description": "A simple Karma framework to start a child process (which is supposed to start a server written with node).",
   "main": "index.js",
   "license": "Apache-2.0",
+  "homepage": "https://github.com/TNG/karma-child-process#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TNG/karma-child-process.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TNG/karma-child-process/issues"
+  },
   "scripts": {
     "eslint": "mkdir -p \"report/eslint\" && eslint -f checkstyle . > report/eslint/eslint.xml",
     "integration-test": "node node_modules/karma/bin/karma start integ-test/karma.conf.js",
