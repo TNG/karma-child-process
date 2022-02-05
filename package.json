@@ -15,7 +15,7 @@
   "scripts": {
     "eslint": "mkdir -p \"report/eslint\" && eslint -f checkstyle . > report/eslint/eslint.xml",
     "integration-test": "node node_modules/karma/bin/karma start integ-test/karma.conf.js",
-    "unittest": "mkdir -p \"report/tests\" && env BABEL_ENV='test' XUNIT_FILE='report/tests/TESTS-NodeJS.xml' node node_modules/mocha/bin/mocha --ui bdd --recursive 'unittest/*.spec.js' -R spec-xunit-file",
+    "unittest": "mkdir -p \"report/tests\" && env BABEL_ENV='test' XUNIT_FILE='report/tests/TESTS-NodeJS.xml' node node_modules/mocha/bin/mocha --ui bdd --recursive 'unittest/*.spec.js'",
     "test": "npm run unittest && npm run integration-test"
   },
   "devDependencies": {
@@ -33,7 +33,6 @@
     "rewire": "6.0.0",
     "sinon": "13.0.1",
     "sinon-chai": "3.7.0",
-    "spec-xunit-file": "0.0.1-3",
     "watchify": "4.0.0"
   }
 }
