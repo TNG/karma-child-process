@@ -20,20 +20,20 @@
   },
   "devDependencies": {
     "browserify": "17.0.0",
-    "chai": "4.2.0",
-    "eslint": "7.18.0",
-    "express": "4.17.1",
-    "karma": "6.0.1",
-    "karma-browserify": "8.0.0",
-    "karma-firefox-launcher": "2.1.0",
+    "chai": "4.3.6",
+    "eslint": "8.8.0",
+    "express": "4.17.2",
+    "karma": "6.3.15",
+    "karma-browserify": "8.1.0",
+    "karma-firefox-launcher": "2.1.2",
     "karma-mocha": "2.0.1",
     "karma-mocha-reporter": "2.2.5",
     "karma-child-process": "file:.",
-    "mocha": "8.2.1",
-    "rewire": "5.0.0",
-    "sinon": "9.2.4",
-    "sinon-chai": "3.5.0",
+    "mocha": "9.2.0",
+    "rewire": "6.0.0",
+    "sinon": "13.0.1",
+    "sinon-chai": "3.7.0",
     "spec-xunit-file": "0.0.1-3",
-    "watchify": "3.11.1"
+    "watchify": "4.0.0"
   }
 }
