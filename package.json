@@ -23,7 +23,7 @@
     "chai": "4.5.0",
     "eslint": "9.33.0",
     "eslint-formatter-checkstyle": "8.40.0",
-    "express": "5.1.0",
+    "express": "5.2.1",
     "karma": "6.4.4",
     "karma-browserify": "8.1.0",
     "karma-firefox-launcher": "2.1.3",
