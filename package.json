@@ -30,7 +30,7 @@
     "karma-mocha": "2.0.1",
     "karma-mocha-reporter": "2.2.5",
     "karma-child-process": "file:.",
-    "mocha": "11.7.1",
+    "mocha": "11.7.5",
     "rewire": "9.0.1",
     "sinon": "21.0.0",
     "sinon-chai": "3.7.0",
