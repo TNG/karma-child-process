@@ -1,6 +1,6 @@
-import {defineConfig} from "eslint/config";
+const { defineConfig } = require("eslint/config");
 
-export default defineConfig([{
+module.exports = defineConfig([{
   languageOptions: {
     globals: {
       require: "readonly",
