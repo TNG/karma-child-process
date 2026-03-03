@@ -25,7 +25,6 @@ const karmaConfig = {
   reporters: ['mocha'],
 
   mochaReporter: {
-    showDiff: 'inline',
     output: 'full'
   },
 
