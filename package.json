@@ -21,8 +21,8 @@
   "devDependencies": {
     "browserify": "17.0.1",
     "chai": "4.5.0",
-    "eslint": "9.33.0",
-    "eslint-formatter-checkstyle": "8.40.0",
+    "eslint": "10.8.0",
+    "eslint-formatter-checkstyle": "9.0.1",
     "express": "5.2.1",
     "karma": "6.4.4",
     "karma-browserify": "8.1.0",
@@ -32,16 +32,17 @@
     "karma-mocha-reporter": "2.2.5",
     "mocha": "11.7.5",
     "rewire": "9.0.1",
-    "sinon": "21.0.1",
+    "sinon": "22.1.0",
     "sinon-chai": "3.7.0"
   },
   "overrides": {
     "mocha": {
+      "brace-expansion": "5.0.8",
       "diff": "8.0.3",
       "serialize-javascript": "7.0.5"
     },
-    "body-parser": {
-      "brace-expansion": "1.1.13"
+    "minimatch": {
+      "brace-expansion": "5.0.8"
     }
   }
 }
